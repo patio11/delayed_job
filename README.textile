@@ -62,3 +62,11 @@ Run @script/generate delayed_job@ to add @script/delayed_job@. This script can t
 
   $ ruby script/delayed_job -e production start
   $ ruby script/delayed_job -e production stop
+
+h3. Additional options
+
+  $ ruby script/delayed_job -e production -n 2 start
+  (Runs two workers in separate processes.)
+
+  $ ruby script/delayed_job -e production -s 2 start
+  (Sleeps 2 seconds, instead of the default 5, between successive checks of the job queue.)
